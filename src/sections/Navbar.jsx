@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+
 function Navigation() {
   return (
     <ul className="nav-ul">
@@ -14,8 +15,8 @@ function Navigation() {
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#work">
-          Work
+        <a className="nav-link" href="#projects">
+          Projects
         </a>
       </li>
       <li className="nav-li">
@@ -23,9 +24,21 @@ function Navigation() {
           Contact
         </a>
       </li>
+      <li className="nav-li">
+        <a
+          className="nav-link px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all"
+          href="./assets/CV_PDF.pdf"
+          // download
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          My Journey in PDF
+        </a>
+      </li>
     </ul>
   );
 }
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -36,7 +49,7 @@ const Navbar = () => {
             href="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
-            Ali
+            Tanvi Shindodkar
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}

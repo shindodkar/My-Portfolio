@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
-import CopyEmailButton from "../components/CopyEmailButton";
+import { mySocials } from "../constants";
 import { Frameworks } from "../components/FrameWorks";
 
 const About = () => {
@@ -13,14 +13,17 @@ const About = () => {
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
           <img
-            src="assets/coding-pov.png"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+            src="/assets/Profile_picture.jpeg"
+            className="rounded-full w-40 absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Ali Sanati</p>
+            <p className="headtext">Hi, I'm Tanvi Shindodkar</p>
             <p className="subtext">
-              Over the last 4 years, I developed my frontend and backend dev
-              skills to deliver dynamic and software and web applications.
+              I began as a creative developer, building dynamic web experiences
+              with JavaScript, React, and modern UI frameworks. Over time, my
+              curiosity for intelligent systems led me to explore AI and Machine
+              Learning — where logic meets data and creativity powers
+              innovation.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -35,13 +38,13 @@ const About = () => {
               CODE IS CRAFT
             </p>
             <Card
-              style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              text="GRASP"
+              style={{ rotate: "75deg", top: "20%", left: "30%" }}
+              image="https://th.bing.com/th/id/R.0fa3fe04edf6c0202970f2088edea9e7?rik=joOK76LOMJlBPw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fgoogle-logo-png-open-2000.png&ehk=0PJJlqaIxYmJ9eOIp9mYVPA4KwkGo5Zob552JPltDMw%3d&risl=&pid=ImgRaw&r=0"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="SOLID"
+              text="Grid Layout"
               containerRef={grid2Container}
             />
             <Card
@@ -51,27 +54,27 @@ const About = () => {
             />
             <Card
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Design Principles"
+              text="logical Thinking"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="SRP"
+              text="Clean Code"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
+              image="https://th.bing.com/th/id/R.4e02f099b6c2f37184dbaa3fb7763a5a?rik=EYEZnIJgueBLow&riu=http%3a%2f%2fpngimg.com%2fuploads%2fapple_logo%2fapple_logo_PNG19673.png&ehk=Ic2a6mkSJpMNd9U0nN6WU9f5r%2fjYl%2f7Vd6St%2f0%2bq%2b24%3d&risl=&pid=ImgRaw&r=0"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
+              image="https://cdn.pixabay.com/photo/2022/01/11/15/02/pinterest-6930796_1280.png"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
+              image="assets/logos/microsoft.svg"
               containerRef={grid2Container}
             />
           </div>
@@ -84,17 +87,31 @@ const About = () => {
               I'm based in Mars, and open to remote work worldwide
             </p>
           </div>
+          <div className="z-10 w-[50%]">
+            <p className="headtext"></p>
+            <div className="flex gap-3">
+              {mySocials.map((social, index) => (
+                <a href={social.href} key={index}>
+                  <img
+                    src={social.icon}
+                    className="w-5 h-5"
+                    alt={social.name}
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
           <figure className="absolute left-[30%] top-[10%]">
             <Globe />
           </figure>
         </div>
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
-          <div className="flex flex-col items-center justify-center gap-4 size-full">
+          <div className="flex flex-col items-center justify-center gap-4 size-sm">
             <p className="text-center headtext">
-              Do you want to start a project together?
+              I believe data is not just numbers — it's the key to understanding
+              people, patterns, and possibility.
             </p>
-            <CopyEmailButton />
           </div>
         </div>
         {/* Grid 5 */}
@@ -102,7 +119,7 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headText">Teck Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
+              I specialize in a variety of languages, frameworks, and tools that
               allow me to build robust and scalable applications
             </p>
           </div>
